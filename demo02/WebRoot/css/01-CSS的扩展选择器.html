@@ -2,9 +2,78 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>伪元素选择器</title>
+	<style type="text/css">
+		/* 关联选择器
+			多个标签之间用空格隔开
+		 
+		div font {
+			color: red;
+		}
+		*/
+		/* 组合选择器
+			多个选择器可以用逗号隔开
+		 */
+		#haha,.hehe{
+			background-color: gray;
+			
+		}
+		/* 伪元素选择器
+			CSS预先定义好一些选择器，可以直接使用
+			
+		 */
+		input:FOCUS {
+			background-color: red;
+		}
+	
+		
+		/* 未访问的状态 */
+		a:LINK {
+			text-decoration: none;
+		}
+		
+		/* 访问完成状态 */
+		a:VISITED {
+			color: green;
+			font-size: 15px
+		}
+		
+		/* 悬停状态 */
+		a:HOVER {
+			color: red;
+			font-size: 25px
+		}
+		/* 点击状态 */
+		a:ACTIVE {
+			color: blue;
+			font-size: 30px
+		}
+		
+		div{
+			margin: 10px;
+			padding: 10px;
+		}
+		
+	</style>
+
 </head>
 <body>
-
+	<input type="text"/>
+	<p/>
+	
+	<a href="http://www.baidu.com" target="new">百度一下</a>
+	
+	<hr/>
+	
+	
+	<div id="haha">这是DIV<font>区域1</font></div>
+	<div>这是DIV区域2</div>
+	
+	<span class="hehe">这是span<font>区域1</font></span>
+	<span>这是span区域1</span>
+	
+	<p>P的区域11111</p>	
+	<p>P的区域22222</p>
+	
 </body>
 </html>
