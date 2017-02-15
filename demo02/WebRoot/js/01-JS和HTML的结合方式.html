@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+</head>
+<body>
+ <!-- 
+ 	1.HTML的文件提供了一个标签 <script type="text/javascript"> JS代码 </script>
+ 		特点<script>标签可以放在页面中的任意位置
+ 	2.引入外部文件方式:<script type="text/javascript" src="引入外部文件的地址"></script>
+ 		特点如果src的属性引入了外部文件，在script标签内部的代码是不会被执行的。
+ 		
+ 	js代码 虽然可以随意放在页面的任意位置，但是一般情况下
+ 		如果引入了外部文件(没有直接操作HTML标签)放在haed标签之间
+ 		如果在本页面写的JS代码 也没有之间操作HTML标签，放在body结束的位置
+  -->
+	<script type="text/javascript" src="day_02.js"></script>
+	<script type="text/javascript">
+		//弹出一个提示框
+		window.alert("哈哈哈");	
+	</script>
+</body>
+</html>
