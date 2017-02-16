@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+</head>
+<body>
+ <!--  -->
+	
+</body>
+<script type="text/javascript">
+	/* 
+		JS的全局变量:定义在<script>标签中间的变量，全是全局变量
+			全局变量不仅可以在<script>标签中间中间使用，其他<script>中也可以使用
+		JS的局部变量，只有定义在方法内部的变量，才是局部变量
+			
+	
+	*/
+	for(var i = 0 ; i<3;i++){
+		document.write("i="+i+"<br/>");
+	}
+	document.write("i=="+i+"<br/>");
+	
+	function show(){
+		var s = 10;//局部变量
+	}
+	
+	var x = 4;				//全局变量
+	function shows(x){		//局部变量
+		x = 8;				//操作局部变量
+	}
+	shows(x);
+	document.write("x = " +x);	//4
+	
+</script>
+</html>
