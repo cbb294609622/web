@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+<script type="text/javascript" src="out.js"></script>
+</head>
+<body>
+ <!--  -->
+	
+</body>
+<script type="text/javascript">
+	/* 
+		全局函数游离的状态，函数可以直接使用
+			eval() 		解析字符串，可以执行字符串中的方法
+				var str = "alert('呵呵')";
+				eval(str);
+			
+			isNaN()		是否是非法的数字	true代表是非法数字，反之false
+				alert(isNaN("abc"- 1));//true  
+			
+		下面这些方法都和编码和解码有关。
+		想传输中文乱码的问题，先把中文编码（UTF-8），进行传输。再把内容进行解码。
+			encodeURI()		编码
+			decodeURI()		解码
+				
+			encodeURIComponent()	编码
+			decodeURIComponent()	解码
+				
+			escape()		编码
+			unescape()		解码
+			
+	*/
+	var str = "abc张三";
+	//编码
+	var str1 = encodeURI(str);
+	printLn(str1);
+	//解码
+	var str2 = decodeURI(str1);
+	printLn(str2);
+	
+</script>
+</html>

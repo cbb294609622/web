@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+<script type="text/javascript" src="out.js"></script>
+</head>
+<body>
+ 	<!-- 绑定一个事件 -->
+	<input type="button"  value="点击事件" onclick="run()"/><br/>
+	<input type="button"  value="下一页" onclick="run1()"/><br/>
+	<input type="button"  value="上一页" onclick="run2()"/><br/>
+	<input type="button"  value="地址栏" onclick="run3()"/><br/>
+</body>
+<script type="text/javascript">
+	/* 
+			BOM Navigator 			-- 和浏览器版本相关的（**）
+			BOM Screen 				-- 和浏览器屏幕相关的（忘了吧）
+			BOM History 			-- 和浏览器历史相关的（**）
+				forward()	去下一页
+				back()		去上一页
+				go()		传入值，如果1等于forward()	如果传入-1代表是back()
+			BOM Location 			-- 和浏览器地址栏相关的（***）
+				href		当前页面的地址的链接	获取和设置当前网页的地址
+			
+			window可以省略不写。	
+	
+	*/
+	function run(){
+		alert(window.navigator.userAgent);
+	}
+	function run1(){
+		window.history.forward();
+	}
+	function run2(){
+		window.history.back();
+	}
+	function run3(){
+		window.location.href = "http://www.baidu.com";
+		//alert(window.location.href);
+	}
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+<script type="text/javascript" src="out.js"></script>
+</head>
+<body>
+ <!--  -->
+	
+</body>
+<script type="text/javascript">
+	/* 
+		正则表达式
+			声明:	var reg = new RegExp(表达式);
+					var reg = /表达式/;
+					特殊的写法 var reg = /^表达式$/;(重点)
+			
+			方法:
+					exec(需要校验的字符串)	返回匹配结果	
+					test(需要校验的字符串)	返回true or false (重点)
+	*/
+	var reg = new RegExp("[0-9]{5}");
+	var reg2 = /^[0-9]{5}$/;
+	
+	printLn(reg2.exec("123456"));
+	printLn(reg2.test("123456"));
+	
+	
+</script>
+</html>
