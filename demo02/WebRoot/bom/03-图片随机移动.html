@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>图片移动</title>
+<script type="text/javascript" src="out.js"></script>
+<style type="text/css">
+	img{
+		position: absolute;
+	}
+
+</style>
+
+</head>
+<body	onload="run()">
+ <!--  -->
+	<img id = "imgId" alt="" src="cigarette.png"><br/>
+	<input id = "userId" type="text" name = "username" value = "haha" />
+</body>
+<script type="text/javascript">
+	/* 
+		加载事件: 页面加载完成，立即执行该事件。
+			onload = "run()"
+			一般作用在<body>标签上
+		window对象
+			包含document对象。getElementById("id的值")	获取元素对象
+		
+	*/
+	
+	function run(){
+		var img = window.document.getElementById("imgId");	
+		img.style.top = Math.random()*300+"px";
+		img.style.left = Math.random()*500+"px";
+		window.setTimeout("run()", 1000);
+	}
+	
+</script>
+</html>

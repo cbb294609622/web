@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+<script type="text/javascript" src="out.js"></script>
+</head>
+<body>
+ <!--  -->
+	<input type="button" value="删除"	onclick="del()"/><br/>
+	<input type="button" value="定时器"	onclick="run()"/><br/>
+	<input type="button" value="清除定时器"	onclick="clearRun()"/><br/>
+	<input type="button" value="弹出新窗口"	onclick="newWin()"/><br/>
+	
+</body>
+<script type="text/javascript">
+	/* 
+		window 对象
+			alert()								弹出提示框
+			confrim(显示的内容)					弹出询问框
+				两个按钮	确定true	取消false
+			setInterval("函数名称",毫秒数)		每隔x毫秒就执行一次	默认返回ID值唯一
+			setTimeout("函数名称",毫秒数)		到x毫秒后执行一次	默认返回ID值唯一
+			clearInterval(唯一的ID值)			清除定时器
+			clearTimeout(唯一的ID值)			清除定时器
+			open(uri,name,features)				弹出新的窗口	
+				
+	*/
+	
+	function newWin(){
+		window.open("http://www.baidu.com","aaaa","width=400,height=200");
+	}
+	
+	function clearRun(){
+		window.clearInterval(timeId);
+	}
+	
+	
+	var timeId;
+	function run(){
+		timeId = window.setInterval("show()",3000);
+
+		//window.setTimeout("show()",3000);
+	}
+	
+	function show(){
+		alert("666");
+	}
+	
+	function del(){
+		if(window.confirm("确定删除吗?")){
+			alert("删除成功");
+		}else{
+			alert("取消成功");
+		}
+	}
+	
+</script>
+</html>
