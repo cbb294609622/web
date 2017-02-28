@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+</head>
+<body>
+ <!--  -->
+	
+	<h4>无序列表</h4>
+	<ul>
+		<li>北京</li>
+		<li>上海</li>
+		<li>深圳</li>
+		<li>广州</li>
+	</ul>
+	<br/>
+	<input type="button" value = "添加" onclick="update()"/>
+</body>
+<script type="text/javascript">
+	
+	//点击添加数据
+	function update(){
+		//创建元素对象
+		var li = document.createElement("li");
+		//创建文本
+		var textName = document.createTextNode("郑州");
+		//把文本添加到li下面 作为子节点
+		li.appendChild(textName);
+		//把li添加到ul的下面
+		//获取ul节点 返回的是一个数组
+		var uls = document.getElementsByTagName("ul")[0];
+		uls.appendChild(li);
+	
+	}
+	
+	
+	
+</script>
+</html>

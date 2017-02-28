@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+<style type="text/css">
+	tr{
+		text-align: center;
+	}
+	
+</style>
+</head>
+<body>
+ <!--  -->
+	<ul id="ulID">
+		<li>BJ</li>
+		<li>SH</li>
+		<li>SZ</li>
+	</ul>
+	<table border="1" cellpadding="10">
+	<caption>node其他属性</caption>
+		<tr>
+			<th colspan="2">没有空格用它</th>
+			<th colspan="2">有空格用它</th>
+		</tr>
+		<tr>
+			<td>firstChild</td>
+			<td>第一个节点</td>
+			<td>firstElementChild</td>
+			<td>第一个节点</td>
+		</tr>
+		<tr>
+			<td>lastChild</td>
+			<td>最后一个节点</td>
+			<td>lastElementChild</td>
+			<td>最后一个节点</td>
+		</tr>
+		<tr>
+			<td>nextSibling</td>
+			<td>下一同级节点</td>
+			<td>nextElementSibling</td>
+			<td>下一同级节点</td>
+		</tr>
+		<tr>
+			<td>previousSibling</td>
+			<td>上一同级节点</td>
+			<td>previousElementSibling</td>
+			<td>上一同级节点</td>
+		</tr>
+	</table>
+	
+	
+	
+</body>
+<script type="text/javascript">
+	/**
+	var ulid = document.getElementById("ulID");
+	//是DOM一级别:火狐中间都包含空格
+	//var ulFirst = ulid.firstChild;
+	//空格
+	//alert(ulFirst.nodeName);
+	
+	var ulFirst = ulid.firstElementChild;
+	alert(ulFirst.nodeName);
+	*/
+	
+	var ul = document.getElementById("ulID");
+	//判断是否包含子节点
+	alert(ul.hasChildNodes());
+	//判断是否包含属性
+	alert(ul.hasAttributes());
+	
+	
+	
+	
+</script>
+</html>
