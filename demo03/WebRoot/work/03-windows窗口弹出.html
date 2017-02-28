@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>弹出窗口</title>
+</head>
+<body>
+ <!--  -->
+	编号:<input type="text" name = "userNum"  id="numID"/><br/>
+	
+	姓名:<input type="text" name = "userName"  id="nameID"/><br/>
+	<input type="button"  value="选择"  onclick="create()"/>
+</body>
+<script type="text/javascript">
+	
+	//弹出新窗口
+	function create(){
+		window.open("03-windowschild.html","选择数据","width=600,height=300");
+	}
+</script>
+</html>

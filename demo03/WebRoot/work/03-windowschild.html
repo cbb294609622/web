@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>选择数据</title>
+<style type="text/css">
+	tr{
+		text-align: center;
+	}
+
+</style>
+
+
+</head>
+<body>
+ <!--  -->
+	<table border="1" width="100%" cellpadding="10">
+		<tr>
+			<th>操作</th>
+			<th>编号</th>
+			<th>姓名</th>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value = "选择"  onclick = "check('1','张三')"/>
+			</td>
+			<td>1</td>
+			<td>张三</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value = "选择" onclick = "check('2','李四')"/>
+			</td>
+			<td>2</td>
+			<td>李四</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value = "选择" onclick = "check('3','王二')"/>
+			</td>
+			<td>3</td>
+			<td>王二</td>
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+	
+	//获取选择的数据
+	
+	function check(num,name){
+		
+		//获取父窗体
+		var parentWin = window.opener;
+		
+		//使用parentWin对象获取document
+		parentWin.document.getElementById("numID").value = num;
+
+		parentWin.document.getElementById("nameID").value = name;
+		
+		
+		//关闭当前窗口
+		window.close();
+	}
+	
+	
+	
+</script>
+</html>
