@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>下拉列表左右选择</title>
+<style type="text/css">
+	* { margin:0; padding:0; }
+	div.centent {
+	   float:left;
+	   text-align: center;
+	   margin: 10px;
+	}
+	span { 
+		display:block; 
+		margin:2px 2px;
+		padding:4px 10px; 
+		background:#898989;
+		cursor:pointer;
+		font-size:12px;
+		color:white;
+	}
+</style>
+</head>
+<body>
+	<div class="centent">
+		<select multiple="multiple" id="select1" style="width:100px;height:160px;">
+			<option value="1">选项1</option>
+			<option value="2">选项2</option>
+			<option value="3">选项3</option>
+			<option value="4">选项4</option>
+			<option value="5">选项5</option>
+			<option value="6">选项6</option>
+			<option value="7">选项7</option>
+		</select>
+		<div>
+			<span id="add">选中添加到右边&gt;&gt;</span>
+			<span id="add_all" >全部添加到右边&gt;&gt;</span>
+		</div>
+	</div>
+	
+	<div class="centent">
+		<select multiple="multiple" id="select2" style="width: 100px;height:160px;">
+			<option value="8">选项8</option>
+		</select>
+		<div>
+			<span id="remove">&lt;&lt;选中删除到左边</span>
+			<span id="remove_all">&lt;&lt;全部删除到左边</span>
+		</div>
+	</div>
+
+
+</body>
+<script type="text/javascript">
+	
+	/* 
+		选择左边条目添加到右边
+		
+ 	*/	
+ 	
+ 	document.getElementById("add").onclick = function(){
+		//1.首先判断那几个被选中。
+		//先获取select1下所有子节点
+		//先获取select1
+		var select1 = document.getElementById("select1");
+		var select2 = document.getElementById("select2");
+		//获取select1下所有子节点
+		var options = select1.getElementsByTagName("option");
+		//循环遍历 判断是否被选中
+		for(var i = 0 ; i < options.length;i++){
+			//获取每一个option
+			var opt = options[i];
+			//判断是否被选中
+			if(opt.selected == true){
+				//添加到select2中
+				select2.appendChild(opt);
+				i--;
+			}
+		}
+	};
+ 	//全部添加到右边
+ 	document.getElementById("add_all").onclick = function(){
+		var select1 = document.getElementById("select1");
+		var select2 = document.getElementById("select2");
+		var options = select1.getElementsByTagName("option");
+		//循环遍历 添加
+		for(var i = 0 ; i < options.length;i++){
+			//获取每一个option
+			var opt = options[i];
+			//全部添加到右边
+			select2.appendChild(opt);
+			i--;
+		}
+	};
+ 	//从右向左
+	document.getElementById("remove").onclick = function(){
+		//1.首先判断那几个被选中。
+		//先获取select1下所有子节点
+		//先获取select1
+		var select1 = document.getElementById("select1");
+		var select2 = document.getElementById("select2");
+		//获取select1下所有子节点
+		var options = select2.getElementsByTagName("option");
+		//循环遍历 判断是否被选中
+		for(var i = 0 ; i < options.length;i++){
+			//获取每一个option
+			var opt = options[i];
+			//判断是否被选中
+			if(opt.selected == true){
+				//添加到select2中
+				select1.appendChild(opt);
+				i--;
+			}
+		}
+	};
+	
+	
+	//全部添加到右边
+ 	document.getElementById("remove_all").onclick = function(){
+		var select1 = document.getElementById("select1");
+		var select2 = document.getElementById("select2");
+		var options = select2.getElementsByTagName("option");
+		//循环遍历 添加
+		for(var i = 0 ; i < options.length;i++){
+			//获取每一个option
+			var opt = options[i];
+			//全部添加到右边
+			select1.appendChild(opt);
+			i--;
+		}
+	};
+	
+	//双击 添加
+	
+	document.getElementById("select1").ondblclick = function(){
+		//1.首先判断那几个被选中。
+		//先获取select1下所有子节点
+		//先获取select1
+		var select1 = document.getElementById("select1");
+		var select2 = document.getElementById("select2");
+		//获取select1下所有子节点
+		var options = select1.getElementsByTagName("option");
+		//循环遍历 判断是否被选中
+		for(var i = 0 ; i < options.length;i++){
+			//获取每一个option
+			var opt = options[i];
+			//判断是否被选中
+			if(opt.selected == true){
+				//添加到select2中
+				select2.appendChild(opt);
+				i--;
+			}
+		}
+	};
+	document.getElementById("select2").ondblclick = function(){
+		//1.首先判断那几个被选中。
+		//先获取select1下所有子节点
+		//先获取select1
+		var select1 = document.getElementById("select1");
+		var select2 = document.getElementById("select2");
+		//获取select1下所有子节点
+		var options = select2.getElementsByTagName("option");
+		//循环遍历 判断是否被选中
+		for(var i = 0 ; i < options.length;i++){
+			//获取每一个option
+			var opt = options[i];
+			//判断是否被选中
+			if(opt.selected == true){
+				//添加到select2中
+				select1.appendChild(opt);
+				i--;
+			}
+		}
+	};
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
