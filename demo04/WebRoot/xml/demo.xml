@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+	XML:可扩展的标记语言，
+			html标签是固定的，XML中的标签是自定义的，类似Android的自定义控件和原生控件的区别
+			XML对数据进行传输，HTML对数据进行显示
+			
+		XML文档声明:第一行第一列
+			<?xml version="1.0" ?>
+		
+			version="1.0" 		xml文件版本  1.0
+			encoding="UTF-8"	xml打开时采用的编码
+			standalone="yes/no"	xml文件是否独立，如果不是独立的就可以引入外部文件	
+		
+		定义元素的规范:
+			
+			有开始标签必须要有结束标签
+				1.有主体的标签		<a>aaa</a>
+				2.没有主体的标签	<a/>
+			标签必须合理嵌套
+			XML有且只有一个跟标签
+			
+		XML命名规则:
+			区分大小写
+			不能以数字或者中划线开头
+			不能以xml大小写开头
+			不能包含空格
+			名称中间不能包含冒号
+		
+		转义字符:
+			<	&lt;
+			>	&gt
+			&	&amp;
+			"	&quot;
+			'	&apos;
+			
+		CDATA区
+			使用CDATA区中间的内容解析成文本内容(字符串)
+			<![CDATA[ 内容 ]]>
+		
+		PI处理指令
+			用来指挥软件如何解析xml文档		想替换HTML 结果没成功		
+		
+ -->
+
+
+
+<person>
+	<name>陈二</name>
+	<age>
+		<![CDATA[
+		if(a < b && b >a){
+		 < > " " '
+		}	]]>
+	</age>
+	<desc>攻城狮</desc>
+</person>

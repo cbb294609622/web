@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+<style type="text/css">
+
+	#text1{
+		text-align: right;
+	}
+	#text2{
+		text-align: left;
+	}
+	#text3{
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+ <!--  -->
+	<form name="form1" action="success.html" method="post" >
+		<table border="1" cellpadding="10" width="50%">
+			<caption>注册</caption>
+			<tr>
+				<td id="text1">输入用户名:</td>
+				<td id="text2">
+					<input type="text"  onfocus="showName()" onblur="checkName()" name="username" /><span id="uspan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td id="text1">密码:</td>
+				<td id="text2"><input type="password"  id="pwdID" name="password"/></td>
+			</tr>
+			<tr>
+				<td id="text1">确认密码:</td>
+				<td id="text2"><input type="password" id="repwdID" name="repassword"/></td>
+			</tr>
+			<tr>
+				<td id="text1">邮箱:</td>
+				<td id="text2"><input type="text" id="emailID" name="email"/></td>
+			</tr>
+			<tr>
+				<td colspan="2" id="text3">
+				<!-- <input type="submit" value="注册"/> -->
+				<input type="button" value="注册" onclick="mysubmit()">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+<script type="text/javascript">
+	
+	//获取焦点提示
+	function showName(){
+		//获取用户输入的内容
+		var uspan = document.getElementById("uspan");
+		uspan.innerHTML = "请输入用户名";
+		//var input =  document.form1.username;
+		//var value = input.value;
+		
+	}
+	//判断用户名是否为空
+	function checkName(){
+		//获取表单用户名文本框对象的引用
+		var input =  document.form1.username;
+		//获取用户输入的值
+		var values = input.value;
+		
+		//var name = document.getElementById("nameID").value;
+		if(values == ""){
+			var uspan = document.getElementById("uspan");
+			uspan.innerHTML = "<font color='red'>用户名不能为空</font>";
+		}
+	}
+	
+	//以的form表单提交按钮 submit
+	function mysubmit(){
+		var form1  = document.form1;
+		//提交表单 如果这种方式提交表单 不能在form表单头上用onsubmit事件
+		//form1.action="";		//设置提交路径
+		//form1.method = "get"	//设置提交方式
+		form1.submit();
+	}
+	
+	
+</script>
+</html>
