@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE 书架 [
+	<!ELEMENT 书架 (书+) >
+	<!ELEMENT 书 (书名,作者,售价,简介) >
+	<!ELEMENT 书名 (#PCDATA) >
+	<!ELEMENT 作者 (#PCDATA) >
+	<!ELEMENT 售价 (#PCDATA) >
+	<!ELEMENT 简介 (#PCDATA) >
+	
+	<!ATTLIST 书 
+		出版社 CDATA #FIXED "北大出版社" 
+		出版日期 (2015-01-12|2015-01-15|2015-01-11) #REQUIRED 
+		编号 ID #REQUIRED
+	>
+	
+	<!ENTITY username "张三">
+]>
+<书架>
+	<书 编号="b1" 出版日期="2015-01-12">
+		<书名>葵花宝典</书名>
+		<作者>&username;</作者>
+		<售价>998两</售价>
+		<简介>这书不错啊</简介>
+	</书>
+	<书 编号="b2" 出版社="北大出版社" 出版日期="2015-01-11">
+		<书名>JavaWeb开发大全</书名>
+		<作者>班长</作者>
+		<售价>99.8元</售价>
+		<简介>这书真不错啊</简介>
+	</书>
+</书架>

@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+</body>
+	<script type="text/javascript">
+		var xmlDoc = new ActiveXObject("Microsoft.XMLDOM")
+		xmlDoc.async="false"
+		xmlDoc.validateOnParse="true"
+		xmlDoc.load("book.xml")
+		
+		document.write("<br>Error Code: ")
+		document.write(xmlDoc.parseError.errorCode)
+		document.write("<br>Error Reason: ")
+		document.write(xmlDoc.parseError.reason)
+		document.write("<br>Error Line: ")
+		document.write(xmlDoc.parseError.line)
+	</script>
+
+</html>
