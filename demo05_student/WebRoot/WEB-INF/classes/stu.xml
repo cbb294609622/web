@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stus>
+	<stu>
+		<id>001</id>
+		<name>王大锤</name>
+		<sex>男</sex>
+		<like>小视频</like>
+	</stu>
+</stus>
