@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- 配置web应用参数 -->
+	<context-param>
+		<param-name>AAA</param-name>
+		<param-value>AAA VALUES</param-value>
+	</context-param>
+	<context-param>
+		<param-name>BBB</param-name>
+		<param-value>BBB VALUES</param-value>
+	</context-param>
+	<context-param>
+		<param-name>CCC</param-name>
+		<param-value>CCC VALUES</param-value>
+	</context-param>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>ServletDemo</servlet-name>
+		<servlet-class>com.bb.web.servlet.ServletDemo</servlet-class>
+    <!-- 改写生命周期 让servlet在容器启动时，就实例化初始化servlet -->
+		<!-- <load-on-startup>2</load-on-startup> -->
+	</servlet>
+	<servlet>
+		<servlet-name>ServletDemoTwo</servlet-name>
+		<servlet-class>com.bb.web.servlet.ServletDemoTwo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletDemoThree</servlet-name>
+		<servlet-class>com.bb.web.servlet.ServletDemoThree</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletDemo4</servlet-name>
+		<servlet-class>com.bb.web.servlet.ServletDemo4</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletConfigDemo</servlet-name>
+		<servlet-class>com.bb.web.servletconfig.ServletConfigDemo</servlet-class>
+		<!-- 初始化参数 参数会加载web应用的时候，保存到servlet内部的servletConfig对象中 -->
+		<init-param>
+			<param-name>path</param-name>
+			<param-value>e:/b.txt</param-value>
+		</init-param>
+		<init-param>
+			<param-name>AAA</param-name>
+			<param-value>AAA’s value</param-value>
+		</init-param>
+		<init-param>
+			<param-name>BBB</param-name>
+			<param-value>BBB’s value</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletContext1</servlet-name>
+		<servlet-class>com.bb.web.servletcontext.ServletContext1</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>ServletContext2</servlet-name>
+    <servlet-class>com.bb.web.servletcontext.ServletContext2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletContext3</servlet-name>
+    <servlet-class>com.bb.web.servletcontext.ServletContext3</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletContext4</servlet-name>
+    <servlet-class>com.bb.web.servletcontext.ServletContext4</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ForwordDemo1</servlet-name>
+    <servlet-class>com.bb.web.g_forword.ForwordDemo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RedirectDemo1</servlet-name>
+    <servlet-class>com.bb.web.g_forword.RedirectDemo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetDataServlet</servlet-name>
+    <servlet-class>com.bb.web.g_forword.GetDataServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>ServletDemo</servlet-name>
+		<url-pattern>/servlet/ServletDemo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletDemo</servlet-name>
+		<url-pattern>/1.png</url-pattern>
+	</servlet-mapping>
+	<!-- <servlet-mapping> <servlet-name>ServletDemoTwo</servlet-name> <url-pattern>/</url-pattern> 
+		</servlet-mapping> -->
+	<servlet-mapping>
+		<servlet-name>ServletDemoThree</servlet-name>
+		<url-pattern>/servlet/ServletDemoThree</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletDemo4</servlet-name>
+		<url-pattern>/servlet/ServletDemo4</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletConfigDemo</servlet-name>
+		<url-pattern>/servlet/ServletConfigDemo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletContext1</servlet-name>
+		<url-pattern>/servlet/ServletContext1</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContext2</servlet-name>
+    <url-pattern>/servlet/ServletContext2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContext3</servlet-name>
+    <url-pattern>/servlet/ServletContext3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContext4</servlet-name>
+    <url-pattern>/servlet/ServletContext4</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ForwordDemo1</servlet-name>
+    <url-pattern>/servlet/ForwordDemo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RedirectDemo1</servlet-name>
+    <url-pattern>/servlet/RedirectDemo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetDataServlet</servlet-name>
+    <url-pattern>/servlet/GetDataServlet</url-pattern>
+  </servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
