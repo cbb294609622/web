@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="demo08_01_requestgetheader"
+  id="myeclipse.1489992667445"
+  context-root="/demo08_01_requestgetheader"
+  j2ee-spec="5.0"
+  archive="demo08_01_requestgetheader.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

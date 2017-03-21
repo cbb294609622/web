@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="demo08_02_getparameter"
+  id="myeclipse.1489997914026"
+  context-root="/demo08_02_getparameter"
+  j2ee-spec="5.0"
+  archive="demo08_02_getparameter.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
