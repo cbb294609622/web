@@ -19,6 +19,7 @@ import java.util.Arrays;
  * 		5.一般实现Serializable接口		
  * 
  * 
+ * 
  * @author bb
  *
  */
