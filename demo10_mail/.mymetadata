@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="demo10_mail"
+  id="myeclipse.1490584205292"
+  context-root="/demo10_mail"
+  j2ee-spec="5.0"
+  archive="demo10_mail.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

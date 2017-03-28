@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+/* 文字居中 */
+tr{
+	text-align: center;
+}
+/* 合并表格的边框 */
+table {
+	border-collapse: collapse;
+}
