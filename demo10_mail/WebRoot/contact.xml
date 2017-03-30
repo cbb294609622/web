@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contactList>
+	<contact id="1">
+		<name>张三</name>
+		<gender>男</gender>
+		<age>20</age>
+		<phone>15517101010</phone>
+		<email>zs@qq.com</email>
+		<qq>294609622</qq>
+	</contact>
+</contactList>
